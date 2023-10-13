@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e4eefb;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+}
+
+.bkg-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 550px;
+}
+
+.films-wrapper {
+  display: flex;
+}
+
+.film {
+  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+}
+.film h2 {
+  display: inline-flex;
+  flex-flow: column nowrap;
+}
+.film h2 span {
+  color: #162685;
+  font-size: 15px;
+}
+.film img {
+  width: 250px;
+}
+
+/*# sourceMappingURL=App.css.map */

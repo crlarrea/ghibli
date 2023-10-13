@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import "UISystem.scss";
+
+body {
+  background-color: $grey900;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+}
+.bkg-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 550px;
+}
+
+.films-wrapper {
+  display: flex;
+  //   flex-flow: column nowrap;
+}
+.film {
+    cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+  h2 {
+    // flex: 0 0 30%;
+    display: inline-flex;
+    flex-flow: column nowrap;
+    span {
+      color: $blue800;
+      font: {
+        size: 15px;
+      }
+    }
+  }
+  p {
+    // flex: 0 0 50%;
+
+    // max-width: 40ch;
+    // flex: 0 0 50%;
+  }
+  img {
+    // flex: 0 0 10%;
+    width: 250px;
+
+    // filter: opacity(0.5);
+  }
+}
