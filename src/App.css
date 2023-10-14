@@ -33,8 +33,9 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex: 1 0 225px;
+  flex: 1 0 335px;
   overflow-x: scroll;
+  overflow-y: hidden;
   /* Hide scrollbar for Chrome, Safari and Opera */
   /* IE and Edge */
   -ms-overflow-style: none;
@@ -168,7 +169,6 @@ footer a {
   }
   .carousel {
     flex: 1 0 330px;
-    overflow-y: hidden;
   }
 }
 
