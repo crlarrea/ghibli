@@ -117,16 +117,20 @@ body {
 }
 
 footer {
+  padding: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 18px;
   flex: 0 1 40px;
   display: flex;
+}
+footer img {
+  width: 50px;
 }
 footer a {
   color: inherit;
   font-family: "Ghibli";
-  text-transform: uppercase;
   text-decoration: none;
 }
 

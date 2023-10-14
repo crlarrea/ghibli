@@ -129,18 +129,24 @@ body {
 }
 
 footer {
+  padding:$l;
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap:$l;
+  
   flex: 0 1 40px;
   display: flex;
+  img{
+    width:50px;
+  }
   a{
     color: inherit;
     font:{
       family:'Ghibli';
     }
     text:{
-      transform: uppercase;
+      // transform: uppercase;
       decoration:none;
     }
 
