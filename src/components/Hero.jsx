@@ -27,7 +27,7 @@ export const Hero = ({
         </h2>
         <p>{description}</p>
         <p>
-          {release_date} {running_time} min
+          {release_date} | {running_time} min
         </p>
         <p>Score: {rt_score}/100</p>
       </article>
