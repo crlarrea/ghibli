@@ -6,39 +6,142 @@
 
 @import "UISystem.scss";
 
+body {
+  font: {
+    family: "Roboto Medium";
+    size: $m;
+  }
+  background-color: $blue900;
+}
+
+#root {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  width: 100vw;
+}
 .carousel {
   display: flex;
-  width: 100%;
-  height: 250px;
-  overflow-y: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 0 225px;
   overflow-x: scroll;
   @include hideScrollbar;
-  img {
-    width: 150px;
-    cursor: pointer;
+  padding: {
+    top: $xh;
+  }
+  margin: {
+    top: -$xh;
+  }
+  article {
     &:hover {
       transition: all 0.3s;
       transform: scale(1.2);
+    }
+
+    img {
+      width: 150px;
+      cursor: pointer;
     }
   }
 }
 
 .hero {
-  height:80vh;
-  background: {
-    size: cover;
-    repeat: no-repeat;
-    
-  }
-  
-
+  padding: $h;
+  flex: 1 0 60%;
+  position: relative;
+  color: $white100;
   article {
+    &:first-of-type {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: {
+        size: cover;
+        repeat: no-repeat;
+        position: relative;
+      }
+
+      filter: brightness(0.4);
+    }
+    &:last-of-type {
+      display: flex;
+      flex-flow: column nowrap;
+      row-gap: $m;
+    }
+  }
+
+  p {
+    font: {
+      size: $xl;
+    }
+    max-width: 55ch;
+  }
+
+  div {
     display: flex;
     flex-flow: column nowrap;
-    row-gap: $m;
+    align-items: center;
+    position: absolute;
+    right: $l;
+    img {
+      // background-color: red;
+      padding: {
+        right: $xxl;
+      }
+    }
+    h1 {
+      writing-mode: vertical-lr;
+      transform: rotate(-180deg);
+
+      font: {
+        family: "Ghibli";
+        size: $h;
+      }
+      span {
+        color: rgba($blue900, 0.7);
+      }
+    }
   }
-  padding: $h;
-  p {
-    max-width: 45ch;
+  h2 {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    font: {
+      family: "Gabarito Bold";
+      size: $xh;
+    }
+    max-width: 25ch;
+    span {
+      color: rgba($blue900, 0.6);
+      font: {
+        size: $xxl;
+      }
+    }
   }
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 40px;
+  display: flex;
+  a{
+    color: inherit;
+    font:{
+      family:'Ghibli';
+    }
+    text:{
+      transform: uppercase;
+      decoration:none;
+    }
+
+  }
+}
+
+
+@import 'Tablet.scss';
+@import 'Mobile.scss';
