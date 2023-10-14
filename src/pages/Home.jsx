@@ -1,31 +1,17 @@
-import React, { useEffect, useState } from "react";
-import totoro from "../assets/img/totoro.svg";
-import { Film } from "../components/Film";
+import React, { useReducer, useEffect } from "react";
+import { Carousel } from "../components/Carousel";
+import { HeroReducer } from "../reducers/MainReducer";
+import { Hero } from "../components/Hero";
+
 export const Home = () => {
-  let [films, setFilms] = useState([]);
-  const fetchData = async () => {
-    try {
-      const data = await fetch("https://ghibliapi.vercel.app/films");
-      const payload = await data.json();
-      setFilms(payload);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [currentHero, dispatch] = useReducer(HeroReducer, {});
   useEffect(() => {
-    fetchData();
-  }, []);
+    console.log(currentHero);
+  }, [currentHero]);
   return (
-    <section className="home">
-      {/* <h1>ghibli</h1> */}
-      <img src={totoro} className="bkg-img"/>
-      {films && (
-        <div className='films-wrapper'>
-          {films.map((entry) => {
-            return <Film props={entry} key={entry.id} />;
-          })}
-        </div>
-      )}
-    </section>
+    <>
+      <Hero props={currentHero} />
+      <Carousel props={{ dispatch: dispatch }} />
+    </>
   );
 };
