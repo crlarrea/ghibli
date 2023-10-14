@@ -79,6 +79,11 @@ body {
       size: $xl;
     }
     max-width: 55ch;
+    &:last-of-type{
+      span{
+        color:$blue900;
+      }
+    }
   }
 
   div {

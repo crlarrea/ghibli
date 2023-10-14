@@ -82,6 +82,9 @@ body {
   font-size: 21px;
   max-width: 55ch;
 }
+.hero p:last-of-type span {
+  color: #00aef0;
+}
 .hero div {
   display: flex;
   flex-flow: column nowrap;

@@ -29,7 +29,7 @@ export const Hero = ({
         <p>
           {release_date} | {running_time} min
         </p>
-        <p>Score: {rt_score}/100</p>
+        <p>Score: <span>{rt_score}</span> / 100</p>
       </article>
     </section>
   );
