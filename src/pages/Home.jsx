@@ -6,9 +6,6 @@ import { Footer } from "../components/Footer";
 
 export const Home = () => {
   const [currentHero, dispatch] = useReducer(HeroReducer, {});
-  useEffect(() => {
-    console.log(currentHero);
-  }, [currentHero]);
   return (
     <>
       <Hero props={currentHero} />
