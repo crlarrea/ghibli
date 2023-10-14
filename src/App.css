@@ -149,7 +149,7 @@ footer a {
 @media only screen and (min-device-width: 220px) and (max-device-width: 767px) {
   .hero {
     padding: 72px;
-    flex: 1 0 80%;
+    flex: 1 0 100%;
   }
   .hero h2 {
     font-size: 36px;
